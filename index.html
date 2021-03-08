@@ -1,172 +1,86 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Knead and Dough</title>
-  <link rel='stylesheet' type='text/css' media='screen' href='./css/styles.css'>
-  <link rel='stylesheet' type='text/css' media='screen' href='./css/bootstrap.css'>
-  <script src='./js/jQuery.js'></script>
-  <script src='./js/bootstrap.js'></script>
-  <script src='./js/index.js'></script>
-</head>
-<body>
-  <div class="container">
-    <h1>Knead and Dough</h1>
-    <p>Welcome to knead and dough. The place for all your pizza needs.</p>
-    <div id="size">
-      <h6>Pizza Size:</h6>
-      <div class="form-check">
-        <input class="form-check-input " type="radio" name="flexRadioDefault" id="megasize" value="400">
-        <label class="form-check-label" for="flexRadioDefault1">
-          Mega (400)
-      </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="largesize" value="300" >
-        <label class="form-check-label" for="flexRadioDefault2">
-          Large (300)
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="mediumsize" value="200">
-        <label class="form-check-label" for="flexRadioDefault3">
-          Medium (200)
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="small" value="100" >
-      <label class="form-check-label" for="flexRadioDefault4">
-        Small (100)
-      </label>
-      </div>
-    </div>
+  <head>
+    <title>Knead and Dough</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/styles.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/bootstrap.css'>
 
-    <div id="crust">
-      <h6>Pizza Crust:</h6>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadio" id="thincrust" value="50">
-        <label class="form-check-label" for="flexRadioDefault5">
-          Thin (50)
-      </label>
+  </head>
+  <body style="background-color: #fce883;">
+    <div class="container">
+      <div id="head">
+        <h1>Knead and Dough</h1>
+        <p>Welcome to knead and dough. The place for all your pizza needs.</p>
       </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadio" id="deeppan" value="100">
-        <label class="form-check-label" for="flexRadioDefault6">
-          Deep Pan (100)
-        </label>
+      
+      <div class="size">
+        <h6>What Pizza Size Would You Like:</h6>
+        <select class="form-select" id="size" aria-label="Default select example">
+          <option value="mega">Mega</option>
+          <option value="large">Large</option>
+          <option value="medium">Medium</option>
+          <option value="small">Small</option>
+        </select>
       </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadio" id="doublecrust" value="150">
-        <label class="form-check-label" for="flexRadioDefault7">
-          Double Crust-150
-        </label>
+
+      <div class="crust">
+        <h6>How Would You Like Your Pizza Crust:</h6>
+        <select class="form-select" aria-label="Default select example" id="crust">
+          <option value="thin">Thin</option>
+          <option value="deep pan">Deep pan</option>
+          <option value="stuffed">Stuffed</option>
+          <option value="double">Double</option>
+        </select>
+          
+      
       </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadio" id="stuffedcrust" value="150">
-      <label class="form-check-label" for="flexRadioDefault8">
-        Stuffed Crust (150)
-        </label>
+    
+      <div class="toppings">
+        <h6>What Toppings Would You Like:</h6>
+        <select class="form-select" aria-label="Default select example" id="toppings">
+          <option value="meaty madness">Meaty Madness - Cheese, Mince Beef, Pepperoni, and Green Capsicum</option>
+          <option value="chicken delight">Chicken Delight - Cheese, Shredded Chicken , and Mushroom Sauce</option>
+          <option value="vegan fever">Vegan Fever - Soy Cheese, Green Capsicum, Sweet Corn, and Pinapple</option>
+        </select>
+      </div>
+
+      <div class="number">
+        <h6>How Many Pizza's Would You Like:</h6>
+        <div class="input-group mb-3">
+          <span class="input" id="number"></span>
+          <input type="number" class="form-control" value="1">
+        </div>
+
+      </div>
+    
+      <div id="delivery">
+        <h6>Delivery Options:</h6>
+        <select class="form-select" aria-label="Default select example" >
+          <option selected>Would You Like Your Pizza Delivered?</option>
+          <option value="0">No</option>
+          <option value="200">Yes</option>
+        </select>
+        <p>NB: Delivery Cost is 200</p>
+        
+        <div class="input-group">
+          <span class="input-group-text">Delivery Location and Instructions</span>
+          <textarea class="form-control" aria-label="With textarea"></textarea>
+        </div>
+
+        <div id="order">
+          <button type="button" class="btn btn-primary btn-sm" id="button">Order</button>
+    
+        </div>
+
+      <div id="Price">
+
+      </div>
+
       </div>
     
     </div>
-  
-    <div id="toppings">
-      <h6>Toppings:</h6>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="cheese" value="50">
-        <label class="form-check-label" for="flexCheckDefault">
-          Cheese (50)
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="chicken" value="100">
-        <label class="form-check-label" for="flexCheckChecked">
-          Chicken (100)
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="beef" value="100">
-        <label class="form-check-label" for="flexCheckDefault">
-          Beef Mince (100)
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="pepperoni" value="100">
-        <label class="form-check-label" for="flexCheckChecked">
-          Pepperoni (100)
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="pineapple" value="100">
-        <label class="form-check-label" for="flexCheckDefault">
-          Pineapple (100)
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="ham" value="100">
-        <label class="form-check-label" for="flexCheckChecked">
-          Ham (100)
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="bacon" value="100">
-        <label class="form-check-label" for="flexCheckDefault">
-          Bacon (100)
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="salami" value="100">
-        <label class="form-check-label" for="flexCheckChecked">
-          Salami (100)
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="prawns" value="200">
-        <label class="form-check-label" for="flexCheckDefault">
-          Prawns (200)
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="veges" value="100">
-        <label class="form-check-label" for="flexCheckChecked">
-          Assorted Vegetables (100)
-        </label>
-      </div>
-
-    </div>
-
-    <div id="number">
-      <h6>How Many Pizza's Would You Like:</h6>
-      <div class="input-group mb-3">
-        <span class="input" id="number"></span>
-        <input type="number" class="form-control">
-      </div>
-
-    </div>
-  
-    <div id="delivery">
-      <h6>Delivery Options:</h6>
-      <select class="form-select" aria-label="Default select example" >
-        <option selected>Would you like your pizza delivered?</option>
-        <option value="0">No</option>
-        <option value="200">Yes</option>
-      </select>
-      
-      <div class="input-group">
-        <span class="input-group-text">Delivery Location and Instructions</span>
-        <textarea class="form-control" aria-label="With textarea"></textarea>
-      </div>
-
-      <div id="order">
-        <button type="button" class="btn btn-primary btn-sm">Order</button>
-  
-      </div>
-
-    <div id="Price">
-
-    </div>
-
-    </div>
-  
-  </div>
-</body>
+    <script src='./js/jQuery.js'></script>
+    <script src='./js/bootstrap.js'></script>
+    <script src='./js/index.js'></script>
+  </body>
 </html>
