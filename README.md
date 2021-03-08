@@ -6,7 +6,7 @@ Mark Mukenia
 
 ## Product Description:
 
-This is a webpage i which people can order pizza's from knead and dough.
+This is a webpage from which people can order pizza's straight from the knead and dough kitchen.
 
 ## Getting Started:
 
