@@ -15,21 +15,21 @@
       
       <div class="size">
         <h6>What Pizza Size Would You Like:</h6>
-        <select class="form-select" id="size" aria-label="Default select example">
-          <option value="mega">Mega</option>
-          <option value="large">Large</option>
-          <option value="medium">Medium</option>
-          <option value="small">Small</option>
+        <select class="form-select" id="size" aria-label="Default select example" >
+          <option value="250">Mega (250)</option>
+          <option value="200">Large (200)</option>
+          <option value="150">Medium (150)</option>
+          <option value="100">Small (100)</option>
         </select>
       </div>
 
       <div class="crust">
         <h6>How Would You Like Your Pizza Crust:</h6>
         <select class="form-select" aria-label="Default select example" id="crust">
-          <option value="thin">Thin</option>
-          <option value="deep pan">Deep pan</option>
-          <option value="stuffed">Stuffed</option>
-          <option value="double">Double</option>
+          <option value="50">Thin (50)</option>
+          <option value="150">Deep pan (150)</option>
+          <option value="200">Stuffed (200)</option>
+          <option value="200">Double (200)</option>
         </select>
           
       
@@ -38,33 +38,33 @@
       <div class="toppings">
         <h6>What Toppings Would You Like:</h6>
         <select class="form-select" aria-label="Default select example" id="toppings">
-          <option value="meaty madness">Meaty Madness - Cheese, Mince Beef, Pepperoni, and Green Capsicum</option>
-          <option value="chicken delight">Chicken Delight - Cheese, Shredded Chicken , and Mushroom Sauce</option>
-          <option value="vegan fever">Vegan Fever - Soy Cheese, Green Capsicum, Sweet Corn, and Pinapple</option>
+          <option value="300">Meaty Madness - Cheese, Mince Beef, Pepperoni, and Green Capsicum (300)</option>
+          <option value="350">Chicken Delight - Cheese, Shredded Chicken , and Mushroom Sauce (350)</option>
+          <option value="250">Vegan Fever - Soy Cheese, Green Capsicum, Sweet Corn, and Pinapple (250)</option>
         </select>
       </div>
 
       <div class="number">
         <h6>How Many Pizza's Would You Like:</h6>
-        <div class="input-group mb-3">
-          <span class="input" id="number"></span>
-          <input type="number" class="form-control" value="1">
+        <div class="form-floating mb-3">
+          <input type="number" class="form-control" id="number" value="1">
+          <label for="number">How many pizza's would you like to order?</label>
         </div>
-
       </div>
     
-      <div id="delivery">
-        <h6>Delivery Options:</h6>
-        <select class="form-select" aria-label="Default select example" >
-          <option selected>Would You Like Your Pizza Delivered?</option>
+      <div class="delivery">
+        <h6>Would You Like Your Pizza To Be Delivered:</h6>
+        <select class="form-select" aria-label="Default select example" id="delivery">
           <option value="0">No</option>
           <option value="200">Yes</option>
         </select>
         <p>NB: Delivery Cost is 200</p>
         
         <div class="input-group">
-          <span class="input-group-text">Delivery Location and Instructions</span>
-          <textarea class="form-control" aria-label="With textarea"></textarea>
+          <form class="form-floating">
+            <input type="text" class="form-control" id="place">
+            <label for="floatingInputValue">Delivery Location</label>
+          </form>
         </div>
 
         <div id="order">
