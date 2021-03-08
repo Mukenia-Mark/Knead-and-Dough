@@ -6,13 +6,18 @@ Mark Mukenia
 
 ## Product Description:
 
-## Getting Started:
+This is a webpage i which people can order pizza's from knead and dough.
 
-{setup instructions}
+## Getting Started:
 
 ## Dependancies:
 
+jQuery
+Bootstrap
+
 ## Setup Instructions:
+
+No setup instructions
 
 ## License:
 
